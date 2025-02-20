@@ -1,6 +1,6 @@
 def calculadora():
     print("Calculadora Básica")
-    print("Operaciones disponibles: +, -, *, /")
+    print("Operaciones disponibles: +, -, *, /, %, ** (potencia)")
     
     continuar = True
     decision = 'limpiar'
@@ -13,7 +13,7 @@ def calculadora():
                 print(f"Primer número: {num1}")
                 decision = 0
                 
-            operador = input("Ingrese la operación (+, -, *, /): ")
+            operador = input("Ingrese la operación (+, -, *, /, %, **): ")
             num2 = float(input("Ingrese el segundo número: "))
 
             if operador == '+':
@@ -22,11 +22,15 @@ def calculadora():
                 resultado = num1 - num2
             elif operador == '*':
                 resultado = num1 * num2
+            elif operador == '%':
+                resultado = num1 % num2
             elif operador == '/':
                 if num2 == 0:
                     print("Error: No se puede dividir por cero.")
                     return
                 resultado = num1 / num2
+            elif operador == '**':
+                resultado = potencia(num1, num2)
             else:
                 print("Operador no válido. Vuelva a intentarlo. ")
                 continue
@@ -46,6 +50,7 @@ def calculadora():
     
     print("Apagando calculadora...")
 
-
+def potencia(base, exponente):
+    return base ** exponente
 
 calculadora()
