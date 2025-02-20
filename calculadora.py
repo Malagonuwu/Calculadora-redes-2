@@ -1,6 +1,6 @@
 def calculadora():
     print("Calculadora Básica")
-    print("Operaciones disponibles: +, -, *, /")
+    print("Operaciones disponibles: +, -, *, /, %")
     
     continuar = True
     decision = 'limpiar'
