@@ -6,7 +6,7 @@ def calculadora():
         num1 = float(input("Ingrese el primer número: "))
         operador = input("Ingrese la operación (+, -, *, /): ")
         num2 = float(input("Ingrese el segundo número: "))
-        
+        --hola
         if operador == '+':
             resultado = num1 + num2
         elif operador == '-':
